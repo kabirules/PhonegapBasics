@@ -1,0 +1,39 @@
+body{
+	background-color: #888888;
+	/*background-color: #8eadc5;*/
+}
+
+body.light{
+	/*background-color: #8ede1bd;*/
+	background-color: #ffffff;
+}
+
+body.dark{
+	/*background-color: #577a76;*/
+	background-color: #000000;
+}
+
+button{
+	background-color: #7fba67;
+	color: #ffffff;
+	border: none;
+	width: 100%;
+	padding: 30px;
+	font-size: 1em;
+	margin-top: 10px;
+}
+
+#gestures-div{
+	width:100%;
+	background-color: #7fba67;
+	margin-top: 10px;
+	min-height: 300px;
+	display: block;
+}
+
+#info{
+	color: #ffffff;
+	font-size: 2em;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
