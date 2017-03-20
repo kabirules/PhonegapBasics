@@ -37,3 +37,65 @@ button{
 	margin-top: 10px;
 	text-transform: uppercase;
 }
+
+#gestures-div.doubletap{
+	-webkit-animation: doubletap 1.5s 1;
+}
+
+#gestures-div.press{
+	-webkit-animation: press 1.5s 1;
+}
+
+#gestures-div.swipe-right{
+	-webkit-animation: swipe-right 3s 1;
+}
+
+#gestures-div.swipe-left{
+	-webkit-animation: swipe-left 3s 1;
+}
+
+#gestures-div.rotate{
+	-webkit-animation: rotate 3s 1;
+}
+
+@-webkit-keyframes doubletap {
+	0%,100% {
+		background-color: #7fba67;
+	}
+	50% {
+		background-color: #8de1bd;
+	}
+}
+
+@-webkit-keyframes press {
+	0%,100% {
+		background-color: #7fba67;
+	}
+	50% {
+		background-color: #577a76;
+	}
+}
+
+@-webkit-keyframes swipe-right {
+	0%,100% {
+		margin-left: 0%;
+	}
+	50% {
+		margin-left: 100%;
+	}
+}
+
+@-webkit-keyframes swipe-left {
+	0%,100% {
+		width: 100%;
+	}
+	50% {
+		width: 0%;
+	}
+}
+
+@-webkit-keyframes rotate {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
