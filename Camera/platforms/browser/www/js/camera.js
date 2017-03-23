@@ -25,8 +25,19 @@ var app = {
 	},
 	
 	picTaken: function(imageURI) {
-		var image = document.querySelector('#foto');
-		image.src = imageURI;
+		var img = document.createElement('img');
+		img.onload = function() {
+			app.renderPic(img);
+		}
+		img.src = imageURI;
+	},
+	
+	renderPic: function(img) {
+		var canvas = document.querySelector('#foto');
+		var context = canvas.getContext('2d');
+		canvas.width = img.width;
+		canvas.height = img.height;
+		context.drawImage(img, 0, 0, img.width, img.height);
 	},
 	
 	takingPicError: function(message) {
