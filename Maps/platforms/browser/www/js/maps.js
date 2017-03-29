@@ -19,7 +19,7 @@ var app = {
 		  maxZoom: 18
 		}).addTo(myMap);
 		
-		app.renderMarker([position.coords.latitude, position.coords.longitude], 13);
+		app.renderMarker([position.coords.latitude, position.coords.longitude], 'Here I am!', myMap);
 		
 		myMap.on('click', function(myEvent){
 		  var myText = 'Marker in l(' + myEvent.latlng.lat.toFixed(2) + ') and L(' + myEvent.latlng.lng.toFixed(2) + ')';
@@ -28,10 +28,9 @@ var app = {
 	},
 	
 	renderMarker: function(latlng, myText, map){
-		var marker = L.marker(latlng).addTo(map);
-		marker.bindPopup(text).openPopup();
-	},	
-	
+		var myMarker = L.marker(latlng).addTo(map);
+		myMarker.bindPopup(myText).openPopup();
+	},
 
 	errorOnGeoReq: function(error) {
 		console.log(error.code + ': ' + error.message);
